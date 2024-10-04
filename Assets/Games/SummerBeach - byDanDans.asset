@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bddcb23656b95c45bc3d173042d3911, type: 3}
+  m_Name: SummerBeach - byDanDans
+  m_EditorClassIdentifier: 
+  AuthorOrTeamName: byDanDans
+  ItchIOLink: https://bydandans.itch.io/summerbeach
+  SocialMediaLink: https://x.com/byDanDans
+  DirectDownloadLink: https://cdn.matix-media.net/dd/eb9b38a7
+  Description: Made by Dan for the 32Bit Summer Games
+  Name: Summer Beach
+  ThumbnailImage: {fileID: 21300000, guid: cc33ee35b327f054aba69cddfdc6900f, type: 3}
+  OnWindows: 1
+  OnMacOS: 0
+  OnLinux: 0
+  OnWebGL: 1
+  GameJam_1: 22
+  GameJam_2: 0
+  GameJam_3: 0
+  GameJam_4: 0
