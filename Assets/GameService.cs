@@ -3,8 +3,8 @@ public static class GameService
 {
    public static void OnClickButton(GameManifest gameManifest)
     {
-        if (gameManifest.OnWindows) { 
-            Application.OpenURL(gameManifest.DirectDownloadLink);
+        if (gameManifest.OnWindows) {
+            Application.OpenURL("itchio://");
             Application.OpenURL(gameManifest.ItchIOLink);
 
         }

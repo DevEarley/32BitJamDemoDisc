@@ -9,6 +9,42 @@ public class MusicController : MonoBehaviour
     public AudioClip _32BitJamInfoScreen_Music;
     public AudioClip OptionsScreen_Music;
 
+    private void OnApplicationFocus(bool focus)
+    {
+        if(focus == false)
+        {
+            Pause(); 
+        }
+        else
+        {
+
+        Resume();
+        }
+
+    }
+    private void OnApplicationPause(bool pause)
+    {
+        if (pause == true)
+        {
+             Pause(); 
+        }
+        else
+        {
+
+            Resume();
+        }
+    }
+
+   
+
+    public void Pause()
+    {
+        MusicAudioSource.Pause();
+    }
+    public void Resume()
+    {
+        MusicAudioSource.Play();
+    }
     public void Play_GameSelection_Music() 
     {
         MusicAudioSource.Stop();
