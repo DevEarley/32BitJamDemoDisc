@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bddcb23656b95c45bc3d173042d3911, type: 3}
+  m_Name: boohablox arcade
+  m_EditorClassIdentifier: 
+  AuthorOrTeamName: 'Fully Bugged & Gouellie '
+  ItchIOLink: https://fully-bugged.itch.io/boohablox-arcade
+  SocialMediaLink: https://linktr.ee/Fully_Bugged
+  Description: Our take on / Puzzle League / Panel de Pon / Tetris Attack / genre!
+  Name: BoohaBlox - Arcade
+  ThumbnailImage: {fileID: 21300000, guid: 2f36d7007351aec4ea3b69c25c1b9fd4, type: 3}
+  OnWindows: 1
+  OnMacOS: 1
+  OnLinux: 1
+  OnWebGL: 0
+  GameJam_1: 1
+  GameJam_2: 0
+  GameJam_3: 0
+  GameJam_4: 0

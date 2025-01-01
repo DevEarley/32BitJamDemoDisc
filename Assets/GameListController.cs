@@ -21,42 +21,36 @@ public class GameListController : MonoBehaviour
     private void Start()
     {
         SortedGames = Games.ToArray();
-        SortedGames.ToList().ForEach(x => {
-            Debug.Log(x);
-        });
         ServiceLocator = FindAnyObjectByType<ServiceLocator>();
         Animator = gameObject.GetComponent<Animator>();
     }
 
-    private void SetGamesToTarget()
+    private void SetGamesToTarget_AfterAnimation()
     {
         Debug.Log("SetGamesToTarget");
-        for (var i = 0; i < Targets.Count; i++)
+        for (var i = 0; i < Games.Count; i++)
         {
-            // Debug.Log(i + "|" + SortedGames.Length);
-            var enoughGames = SortedGames.Length > i;
-            if (enoughGames == false)
-            {
-                i = Targets.Count;
-                return;
-            }
             var offset_i = i + index;
-            if (offset_i  >= SortedGames.Length) {
-                offset_i = offset_i - (SortedGames.Length );
+            if (offset_i >= SortedGames.Length)
+            {
+                offset_i = offset_i - (SortedGames.Length);
             }
-
             var game = SortedGames[offset_i];
 
-            var target = Targets[i];
-
-            if(game == null || target == null)
+            if (i <= Targets.Count - 1)
             {
-                return;
-            }
+                var target = Targets[i];
+                game.SetActive(true);
 
-             game.transform.SetParent(target.transform, false);
+                game.transform.SetParent(target.transform, false);
+             }
+            else
+            {
+                game.SetActive(false);
+            }
         }
-      
+
+
     }
     public void Idle_Animation()
     {
@@ -64,17 +58,16 @@ public class GameListController : MonoBehaviour
 
         Animator.Play("game-list-intro-idle");
     }
+
     public void ShiftGames_left()
     {
-        Debug.Log("ShiftGames_left");
-
         index--;
         if (index < 0)
         {
             index = SortedGames.Length-1;
         }
 
-        SetGamesToTarget();
+        SetGamesToTarget_AfterAnimation();
     }
 
     public void ShiftGames_right()
@@ -85,8 +78,9 @@ public class GameListController : MonoBehaviour
             index = 0;
         }
 
-        SetGamesToTarget();
+        SetGamesToTarget_AfterAnimation();
     }
+
 
 
 }

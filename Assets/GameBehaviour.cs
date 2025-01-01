@@ -25,8 +25,14 @@ public class GameBehaviour : MonoBehaviour
 
         ServiceLocator.MusicController.Pause();
         GameService.OnClickButton(GameManifest);
+        
     }
 
+    void OnApplicationFocus(bool hasFocus)
+    {
+        if(hasFocus && ServiceLocator && ServiceLocator.MusicController)
+        ServiceLocator.MusicController.Play_GameSelection_Music();
 
+    }
 
 }

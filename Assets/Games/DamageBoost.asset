@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bddcb23656b95c45bc3d173042d3911, type: 3}
+  m_Name: DamageBoost
+  m_EditorClassIdentifier: 
+  AuthorOrTeamName: ' EelShep, MunchiMango, ClaveRedwyn, Jaden Eubanks '
+  ItchIOLink: https://eelshep.itch.io/damage-boost
+  SocialMediaLink: https://x.com/vongarfunkle
+  Description: Take damage and boost your way through this Spooky PSX style 3D platformer.
+  Name: Damage Boost
+  ThumbnailImage: {fileID: 21300000, guid: c3c885069d8274046a92c2fd4e7e0f0e, type: 3}
+  OnWindows: 0
+  OnMacOS: 0
+  OnLinux: 0
+  OnWebGL: 1
+  Rom: 0
+  GameJam_1: 24
+  GameJam_2: 0
+  GameJam_3: 0
+  GameJam_4: 0

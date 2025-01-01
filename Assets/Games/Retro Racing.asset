@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bddcb23656b95c45bc3d173042d3911, type: 3}
+  m_Name: Retro Racing
+  m_EditorClassIdentifier: 
+  AuthorOrTeamName: Richo
+  ItchIOLink: https://richo.itch.io/retro-racing-dd
+  SocialMediaLink: https://richo.itch.io/
+  Description: A fast arcade F1 racing game
+  Name: Retro Racing
+  ThumbnailImage: {fileID: 21300000, guid: 60205f380ec92b942881e7ddd8fb1b94, type: 3}
+  OnWindows: 1
+  OnMacOS: 0
+  OnLinux: 0
+  OnWebGL: 1
+  GameJam_1: 22
+  GameJam_2: 0
+  GameJam_3: 0
+  GameJam_4: 0

@@ -14,6 +14,7 @@ public class GameManifest : ScriptableObject
     public bool OnMacOS;
     public bool OnLinux;
     public bool OnWebGL;
+    public bool Rom;
     public GameManifest_GameJam GameJam_1 = GameManifest_GameJam.Unselected;
     public GameManifest_GameJam GameJam_2 = GameManifest_GameJam.Unselected;
     public GameManifest_GameJam GameJam_3 = GameManifest_GameJam.Unselected;

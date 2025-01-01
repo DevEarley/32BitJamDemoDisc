@@ -21,7 +21,8 @@ MonoBehaviour:
   OnWindows: 0
   OnMacOS: 0
   OnLinux: 0
-  OnWebGL: 1
+  OnWebGL: 0
+  Rom: 1
   GameJam_1: 1
   GameJam_2: 0
   GameJam_3: 0
