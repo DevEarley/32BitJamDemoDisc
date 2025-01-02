@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bddcb23656b95c45bc3d173042d3911, type: 3}
+  m_Name: the ones that passed
+  m_EditorClassIdentifier: 
+  AuthorOrTeamName: CHAINED, blackborzoi
+  ItchIOLink: https://bychained.itch.io/the-ones-that-passed
+  SocialMediaLink: https://bychained.itch.io
+  Description: 'A grim and dark first person dungeon crawler. \nCheck out Black Borzoi
+    on soundcloud: soundcloud.com/black_borzoi '
+  Name: THE ONES THAT PASSED
+  ThumbnailImage: {fileID: 21300000, guid: db07f14d49fdeb54b80ea081ba9e24d6, type: 3}
+  OnWindows: 1
+  OnMacOS: 0
+  OnLinux: 0
+  OnWebGL: 0
+  Rom: 0
+  GameJam_1: 25
+  GameJam_2: 0
+  GameJam_3: 0
+  GameJam_4: 0

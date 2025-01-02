@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bddcb23656b95c45bc3d173042d3911, type: 3}
+  m_Name: save the penguins
+  m_EditorClassIdentifier: 
+  AuthorOrTeamName: Mr Union
+  ItchIOLink: https://mr-union.itch.io/savethepenguins
+  SocialMediaLink: https://soundcloud.com/user-506548291
+  Description: Here is "Save The Penguins!" my very first game and my first participation
+    in a game jam as a developer!
+  Name: Save The Penguins !
+  ThumbnailImage: {fileID: 21300000, guid: 88a34c0b22c0c9b4cab6e21f99ea52a5, type: 3}
+  OnWindows: 1
+  OnMacOS: 0
+  OnLinux: 0
+  OnWebGL: 0
+  Rom: 0
+  GameJam_1: 25
+  GameJam_2: 0
+  GameJam_3: 0
+  GameJam_4: 0

@@ -19,31 +19,38 @@ public class SFXController : MonoBehaviour
 
     public void Play_Continue_SFX()
     {
+        SFXAudioSource.Stop();
         SFXAudioSource.PlayOneShot(Continue_SFX);
     }
 
     public void Play_SelectGame_SFX()
     {
+        SFXAudioSource.Stop();
         SFXAudioSource.PlayOneShot(SelectGame_SFX);
     }
 
     public void Play_ChangeSelection_SFX()
     {
+        SFXAudioSource.Stop();
+
         SFXAudioSource.PlayOneShot(ChangeSelection_SFX);
     }
 
     public void Play_Cancel_SFX()
     {
+        SFXAudioSource.Stop();
         SFXAudioSource.PlayOneShot(Cancel_SFX);
     }
 
     public void Play_OptionTick_SFX()
     {
+        SFXAudioSource.Stop();
         SFXAudioSource.PlayOneShot(OptionTick_SFX);
     }
 
     public void Play_GoBack_SFX()
     {
+        SFXAudioSource.Stop();
         SFXAudioSource.PlayOneShot(GoBack_SFX);
     }
 }
