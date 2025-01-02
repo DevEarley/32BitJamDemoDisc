@@ -15,6 +15,9 @@ public class DemoDiscController : MonoBehaviour
         ServiceLocator = gameObject.GetComponent<ServiceLocator>();
     }
 
-
+    public void ToggleFullscreen()
+    {
+        Screen.fullScreen = !Screen.fullScreen;
+    }
 
 }

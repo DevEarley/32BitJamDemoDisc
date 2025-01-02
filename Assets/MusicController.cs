@@ -7,6 +7,7 @@ public class MusicController : MonoBehaviour
     public AudioClip GameSelection_Music;
     public AudioClip TitleScreen_Music;
     public AudioClip CreditsScreen_Music;
+    public AudioClip GameInfo_Music;
 
     private void OnApplicationFocus(bool focus)
     {
@@ -59,10 +60,16 @@ public class MusicController : MonoBehaviour
     }
 
 
-    public void Play_CreditsScreen_Music() 
+    public void Play_CreditsScreen_Music()
     {
         MusicAudioSource.Stop();
         MusicAudioSource.clip = (CreditsScreen_Music);
+        MusicAudioSource.Play();
+    }
+    public void Play_GameInfo_Music()
+    {
+        MusicAudioSource.Stop();
+        MusicAudioSource.clip = (GameInfo_Music);
         MusicAudioSource.Play();
     }
 

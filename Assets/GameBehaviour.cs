@@ -24,7 +24,8 @@ public class GameBehaviour : MonoBehaviour
     {
 
         ServiceLocator.MusicController.Pause();
-    
+        ServiceLocator.MusicController.Play_GameInfo_Music();
+
         ServiceLocator.GameListController.ChooseGame(GameManifest);
 
 

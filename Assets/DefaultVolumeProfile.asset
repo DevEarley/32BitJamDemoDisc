@@ -49,19 +49,19 @@ MonoBehaviour:
     m_Value: 1
   leakReductionMode:
     m_OverrideState: 1
-    m_Value: 2
+    m_Value: 0
   minValidDotProductValue:
     m_OverrideState: 1
     m_Value: 0.1
   occlusionOnlyReflectionNormalization:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 0
   intensityMultiplier:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 0
   skyOcclusionIntensityMultiplier:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 0
   worldOffset:
     m_OverrideState: 1
     m_Value: {x: 0, y: 0, z: 0}
@@ -361,7 +361,7 @@ MonoBehaviour:
     dimension: 1
   contribution:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -514,7 +514,7 @@ MonoBehaviour:
     m_Value: 0
   contrast:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 72
   colorFilter:
     m_OverrideState: 1
     m_Value: {r: 1, g: 1, b: 1, a: 1}
@@ -765,10 +765,10 @@ MonoBehaviour:
     m_Value: 0
   gaussianStart:
     m_OverrideState: 1
-    m_Value: 10
+    m_Value: 50.3
   gaussianEnd:
     m_OverrideState: 1
-    m_Value: 30
+    m_Value: 203.3
   gaussianMaxRadius:
     m_OverrideState: 1
     m_Value: 1

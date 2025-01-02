@@ -74,6 +74,7 @@ public class GameListController : MonoBehaviour
         is_highlighting_game = true;
         ServiceLocator.MenuAnimator.Play("choose-game-highlight-game");
         CurrentGame = GameManifest;
+        ServiceLocator.SFXController.Play_SelectGame_SFX();
         GameDescription.text = CurrentGame.Description;
         GameTitle.text = CurrentGame.Name;
         GameTeam.text = CurrentGame.AuthorOrTeamName;

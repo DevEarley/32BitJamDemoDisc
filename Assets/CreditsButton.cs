@@ -7,4 +7,8 @@ public class CreditsButton : MonoBehaviour
     {
         SceneManager.LoadScene("credits");
     }
+    public void ClickedRadio()
+    {
+        SceneManager.LoadScene("radio");
+    }
 }
