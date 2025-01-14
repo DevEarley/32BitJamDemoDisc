@@ -162,6 +162,8 @@ MonoBehaviour:
       CylPrefab: {fileID: 162950, guid: f89e5f3b30e43834493b2ce0c5c1bf40, type: 3}
       BoxPrefab: {fileID: 101714, guid: 510379495d27fa548887fb67e4a88585, type: 3}
   Camera_Rig_animator: {fileID: 958662540}
+  Logo: {fileID: 751808856}
+  BigMode: 0
 --- !u!4 &10069006
 Transform:
   m_ObjectHideFlags: 0
@@ -667,7 +669,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -869,6 +871,11 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!1 &751808856 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 59d32b6cd15d0674c866d805b35c2353, type: 3}
+  m_PrefabInstance: {fileID: 2097178737}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &822928814
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1031,8 +1038,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -406.35, y: -100.850006}
-  m_SizeDelta: {x: 702.1, y: 31.13}
+  m_AnchoredPosition: {x: -494.9986, y: -100.85}
+  m_SizeDelta: {x: 524.8028, y: 31.136}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1023134684
 MonoBehaviour:
@@ -1119,7 +1126,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: 0.000030517578, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1277,45 +1284,58 @@ MonoBehaviour:
     Artist: AstroDesert
   - clip: {fileID: 8300000, guid: 7946d5a9c1c20de4399caade186c17f8, type: 3}
     SongName: Dawn Into a New Future
-    Artist: Astar
+    Artist: Niko Kozlowitz
   - clip: {fileID: 8300000, guid: f2ce903fc0478ff4d96dec07e75de91e, type: 3}
     SongName: Title Screen Demo Disc
     Artist: Mr Union
   - clip: {fileID: 8300000, guid: 90092f28b39f909419a0a0fe274cf31c, type: 3}
     SongName: Title Screen Loop
     Artist: Mr Union (Remix by DevEarley)
+  - clip: {fileID: 8300000, guid: facffc52ea314ac4f818a75cc73e5c62, type: 3}
+    SongName: Requiem (OG mix)
+    Artist: 'Xai '
   - clip: {fileID: 8300000, guid: 588feead9a02f51488e69c738ea0e875, type: 3}
     SongName: Requiem Remix
     Artist: Xai (Remix by DevEarley)
-  - clip: {fileID: 8300000, guid: facffc52ea314ac4f818a75cc73e5c62, type: 3}
-    SongName: Requiem (OG mix)
-    Artist: 'Xai '
-  - clip: {fileID: 8300000, guid: facffc52ea314ac4f818a75cc73e5c62, type: 3}
-    SongName: Requiem (OG mix)
-    Artist: 'Xai '
   - clip: {fileID: 8300000, guid: b31ff4936d66727459e313be6374146e, type: 3}
     SongName: Neon Skylines
     Artist: 'ImpyCat '
   - clip: {fileID: 8300000, guid: d9aae75e4db8cf341acbf4f2a9ecb357, type: 3}
     SongName: Comet Rush
     Artist: 'ImpyCat '
-  - clip: {fileID: 8300000, guid: d9aae75e4db8cf341acbf4f2a9ecb357, type: 3}
-    SongName: Neon Skylines
+  - clip: {fileID: 8300000, guid: 6ede8c46ce8848546aa8aab211aa57c6, type: 3}
+    SongName: Solar Signals
     Artist: 'ImpyCat '
+  - clip: {fileID: 8300000, guid: 32fc1a12496898c4eb54cb49798e0269, type: 3}
+    SongName: Streetscape
+    Artist: DannyGoldstar
+  - clip: {fileID: 8300000, guid: 144613d83ea3f0b4e9b7eadd0209e17f, type: 3}
+    SongName: Liquid Crystal
+    Artist: Anubhab Sett
+  - clip: {fileID: 8300000, guid: 022ad2b014eab4f4aa61fe7148d2a4ca, type: 3}
+    SongName: Uncroaked
+    Artist: Mishikis
+  - clip: {fileID: 8300000, guid: 569bf0109aa1cc7478d4fa84167fbb75, type: 3}
+    SongName: Boss_Theme (from Uncroaked)
+    Artist: Mishikis
   CurrentTrackIndex: 0
   SongName_GUI: {fileID: 1023134684}
   Artist_GUI: {fileID: 1986996746}
+  Time_GUI: {fileID: 2058314179}
   Volume_Level: 4
   Volume_Level_0: 0
   Volume_Level_1: 0.2
   Volume_Level_2: 0.33
   Volume_Level_3: 0.66
   Volume_Level_4: 1
+  Play_button: {fileID: 1424201525}
+  Pause_button: {fileID: 381548129}
   Image_Mute: {fileID: 621104159}
   Image_Volume_1: {fileID: 2006845030}
   Image_Volume_2: {fileID: 427221734}
   Image_Volume_3: {fileID: 429126168}
   Image_Volume_4: {fileID: 1541481753}
+  waiting_to_play: 0
 --- !u!4 &1298341777
 Transform:
   m_ObjectHideFlags: 0
@@ -2160,6 +2180,142 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!1 &2058314177
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2058314178}
+  - component: {fileID: 2058314180}
+  - component: {fileID: 2058314179}
+  m_Layer: 5
+  m_Name: Time
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2058314178
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2058314177}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3555102685846922833}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -139.6815, y: -100.85}
+  m_SizeDelta: {x: 168.7631, y: 31.137}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2058314179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2058314177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: 00:00 | 00:00
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 26
+  m_fontSizeBase: 26
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: -1.3135986, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &2058314180
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2058314177}
+  m_CullTransparentMesh: 1
 --- !u!1001 &2097178737
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2302,7 +2458,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: ../ BACK
+  m_text: ../BACK
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2477,6 +2633,7 @@ RectTransform:
   - {fileID: 869212248902934920}
   - {fileID: 3101737873965525903}
   - {fileID: 1023134683}
+  - {fileID: 2058314178}
   - {fileID: 1986996745}
   - {fileID: 621104158}
   - {fileID: 2006845029}

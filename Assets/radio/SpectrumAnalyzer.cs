@@ -11,6 +11,7 @@ public class SpectrumAnalyzer : MonoBehaviour
 {
     public AnalyzerSettings settings; //All of our settings
     public Animator Camera_Rig_animator;
+    public GameObject Logo;
     //private
     private float[] spectrum; //Audio Source data
     private List<GameObject> pillars; //ref pillars to scale/move with music
@@ -76,8 +77,19 @@ public class SpectrumAnalyzer : MonoBehaviour
         momentum = Mathf.Min(0.4f, momentum);
         Camera_Rig_animator.speed = momentum;
         momentum = Mathf.Lerp(momentum, 0.0f, Time.deltaTime  * 4.0f);
-    }
+        momentum = Mathf.Max(0.01f, momentum);
+        if (average > 0.9)
+        {
+            BigMode = Mathf.Lerp(BigMode, 20.0f, Time.deltaTime * (average/4.0f));
+        }
+        else
+        {
+            BigMode = Mathf.Lerp(BigMode, 0, Time.deltaTime * 4.0f);
 
+        }
+            Logo.transform.localScale = momentum*Vector3.one*(20.0f + BigMode);
+    }
+    public float BigMode = 0;
     /// <summary>
     /// Called by UI slider onValue changed
     /// </summary>

@@ -9,7 +9,12 @@ public class DemoDiscController : MonoBehaviour
 {
     [HideInInspector]
     public ServiceLocator ServiceLocator;
-
+    public Sprite Windows;
+    public Sprite MacOs;
+    public Sprite Linux;
+    public Sprite WebGL;
+    public Sprite ROM;
+    public LayerMask GameListLayerMask;
     private void Start()
     {
         ServiceLocator = gameObject.GetComponent<ServiceLocator>();

@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting.Antlr3.Runtime;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.UIElements.Experimental;
@@ -22,18 +23,22 @@ public class RadioController : MonoBehaviour
     public int CurrentTrackIndex = 0;
     public TextMeshProUGUI SongName_GUI;
     public TextMeshProUGUI Artist_GUI;
+    public TextMeshProUGUI Time_GUI;
     public int Volume_Level = 4;
     public float Volume_Level_0 = 0.0f;
     public float Volume_Level_1 = 0.2f;
     public float Volume_Level_2 = 0.33f;
     public float Volume_Level_3 = 0.66f;
     public float Volume_Level_4 = 1.00f;
+    public Image Play_button;
+    public Image Pause_button;
     public Image Image_Mute;
     public Image Image_Volume_1;
     public Image Image_Volume_2;
     public Image Image_Volume_3;
     public Image Image_Volume_4;
     private Vector4 transparent = new Vector4(1, 1, 1, 0.3f);
+
 
     private void Start()
     {
@@ -47,8 +52,11 @@ public class RadioController : MonoBehaviour
     }
     public void Next()
     {
+        if (waiting_to_play == true) return;
+        waiting_to_play = true;
         AudioSource.pitch = 1.0f;
-        Playing = false;
+        StartingToPlay = false;
+        Paused = false;
         Pausing = false;
         CurrentTrackIndex++;
         if (CurrentTrackIndex >= Playlist.Count)
@@ -61,10 +69,24 @@ public class RadioController : MonoBehaviour
         AudioSource.Play();
 
     }
+    private void OnApplicationFocus(bool focus)
+    {
+        if (focus == false)
+        {
+            Paused = true;
+        }
+        else
+        {
+            Play();
+        }
+    }
     public void Previous()
     {
+        if (waiting_to_play == true) return;
+        waiting_to_play = true;
         AudioSource.pitch = 1.0f;
-        Playing = false;
+        StartingToPlay = false;
+        Paused = false;
         Pausing = false;
         CurrentTrackIndex--;
         if (CurrentTrackIndex < 0)
@@ -79,28 +101,59 @@ public class RadioController : MonoBehaviour
 
     public void Play()
     {
-        Pausing = false;
-        Playing = true;
+        if (Paused == false) return;
 
+        Pausing = false;
+        StartingToPlay = true;
+        Paused = false;
         AudioSource.pitch = 1.0f;
+        Pause_time = 0.1f;
+
+
+        Play_button.color = transparent;
+        Pause_button.color = Color.white;
         AudioSource.Play();
+
     }
-    private bool Playing = false;
+    private bool StartingToPlay = false;
     private bool Pausing = false;
+    private bool Paused = true;
     private float Pause_time = 0.0f;
     public void Pause()
     {
-        Playing = false;
+        StartingToPlay = false;
         Pausing = true;
         AudioSource.pitch = 1.0f;
 
+        Play_button.color = Color.white;
+        Pause_button.color = transparent;
         Pause_time = 1.0f;
     }
-
+    public bool waiting_to_play = false;
     public void Update()
     {
+        if (AudioSource.isPlaying)
+        {
+            var length_int_seconds = Mathf.FloorToInt(AudioSource.clip.length);
+            var length_seconds = length_int_seconds % 60;
+            var length_minutes = (length_int_seconds - length_seconds) / 60;
+            var elapsed_int_seconds = Mathf.FloorToInt(AudioSource.time);
+            var elapsed_seconds = (elapsed_int_seconds % 60);
+            var elapsed_minutes = (elapsed_int_seconds - elapsed_seconds) / 60;
+            if (AudioSource.time > 0.25)
+            {
+                waiting_to_play = false;
+            }
+            Time_GUI.text = $"{elapsed_minutes.ToString("00")}:{elapsed_seconds.ToString("00")} | {length_minutes.ToString("00")}:{length_seconds.ToString("00")}";
+        }
+        if (AudioSource.isPlaying == false && Paused == false && waiting_to_play == false)
+        {
+            Next();
+        }
+
         if (Pausing == true)
         {
+            Paused = true;
             Pause_time = Mathf.Lerp(Pause_time, 0.0f, Time.unscaledDeltaTime * 2.5f);
             if (Pause_time < 0.1f)
             {
@@ -110,12 +163,14 @@ public class RadioController : MonoBehaviour
             }
             AudioSource.pitch = Pause_time;
         }
-        if (Playing == true)
+        if (StartingToPlay == true)
         {
             Pause_time = Mathf.Lerp(Pause_time, 1.0f, Time.unscaledDeltaTime * 4.5f);
             if (Pause_time > 0.95f)
             {
-                Playing = false;
+                StartingToPlay = false;
+                Paused = false;
+
                 AudioSource.pitch = 1.0f;
             }
             else

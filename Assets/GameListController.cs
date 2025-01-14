@@ -1,5 +1,6 @@
 
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
@@ -40,10 +41,13 @@ public class GameListController : MonoBehaviour
         ServiceLocator = FindAnyObjectByType<ServiceLocator>();
         Animator = gameObject.GetComponent<Animator>();
         SetGamesToTarget_AfterAnimation();
+        ServiceLocator.MenuAnimator.Play("choose-game");
+
+
     }
 
-    private void SetGamesToTarget_AfterAnimation()
-    {
+
+    private void SetGamesToTarget_AfterAnimation() { 
         Debug.Log("SetGamesToTarget");
         for (var i = 0; i < Games.Count; i++)
         {
