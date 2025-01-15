@@ -1,3 +1,4 @@
+using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -13,7 +14,13 @@ public class GameBehaviour : MonoBehaviour
     private void Start()
     {
         ServiceLocator = FindAnyObjectByType<ServiceLocator>();
+        StartCoroutine(Delayed_start());
 
+    }
+
+    private IEnumerator Delayed_start()
+    {
+        yield return new WaitForSeconds(1.0f);
         Image.sprite = GameManifest.ThumbnailImage;
         var text = GameManifest.Name + "\n";
         text += GameManifest.AuthorOrTeamName + "\n";
@@ -25,7 +32,7 @@ public class GameBehaviour : MonoBehaviour
         }
         if (GameManifest.OnLinux == true)
         {
-            MakeSprite(ServiceLocator.DemoDiscController.Linux, new Vector3(-number_of_icons_* glyph_space, 0, 0));
+            MakeSprite(ServiceLocator.DemoDiscController.Linux, new Vector3(-number_of_icons_ * glyph_space, 0, 0));
             number_of_icons_ += 1;
 
         }
@@ -41,7 +48,8 @@ public class GameBehaviour : MonoBehaviour
         }
         if (GameManifest.OnWebGL == true)
         {
-            MakeSprite(ServiceLocator.DemoDiscController.WebGL, new Vector3( -number_of_icons_ * glyph_space, 0, 0));
+            MakeSprite(ServiceLocator.DemoDiscController.WebGL, new Vector3(-number_of_icons_ * glyph_space, 0, 0));
+            number_of_icons_ += 1;
         }
 
 

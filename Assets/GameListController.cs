@@ -32,7 +32,7 @@ public class GameListController : MonoBehaviour
     public Image GameBadge_WebGL;
     public Image GameBadge_Rom;
 
-
+    public Image GameBadge_PlayButton;
     private GameObject[] SortedGames;
     private int index = 1;
     private void Start()
@@ -40,15 +40,14 @@ public class GameListController : MonoBehaviour
         SortedGames = Games.ToArray();
         ServiceLocator = FindAnyObjectByType<ServiceLocator>();
         Animator = gameObject.GetComponent<Animator>();
-        StartCoroutine(SetGamesToTarget_AfterAnimation());
+        StartCoroutine(Delay_SetGamesToTarget_AfterAnimation());
         //ServiceLocator.MenuAnimator.Play("choose-game");
 
 
     }
 
-
-    private IEnumerator SetGamesToTarget_AfterAnimation() { 
-        yield return new WaitForSecondsRealtime(0.1f);
+    private void SetGamesToTarget_AfterAnimation()
+    {
         Debug.Log("SetGamesToTarget");
         for (var i = 0; i < Games.Count; i++)
         {
@@ -65,12 +64,16 @@ public class GameListController : MonoBehaviour
                 game.SetActive(true);
 
                 game.transform.SetParent(target.transform, false);
-             }
+            }
             else
             {
                 game.SetActive(false);
             }
         }
+    }
+    private IEnumerator Delay_SetGamesToTarget_AfterAnimation() { 
+        yield return new WaitForSecondsRealtime(0.1f);
+        SetGamesToTarget_AfterAnimation();
     }
     private Vector4 transparent_color = new Vector4(1.0f, 1.0f, 1.0f, 0.1f);
     public GameManifest CurrentGame;
@@ -106,10 +109,12 @@ public class GameListController : MonoBehaviour
         if (CurrentGame.OnWebGL == true)
         {
             GameBadge_WebGL.color = Color.white;
+            GameBadge_PlayButton.sprite = ServiceLocator.DemoDiscController.InstaPlay;
 
         }
         else
         {
+            GameBadge_PlayButton.sprite = ServiceLocator.DemoDiscController.DownloadPlay;
             GameBadge_WebGL.color = transparent_color;
         }
         if (CurrentGame.OnMacOS == true)

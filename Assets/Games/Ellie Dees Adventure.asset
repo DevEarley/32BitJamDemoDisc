@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AuthorOrTeamName: LowPolyFreak
   ItchIOLink: https://lowpolyfreak.itch.io/ellie-dees-adventure
+  DirectLink: https://itch.io/embed-upload/12133500
   SocialMediaLink: https://bsky.app/profile/lowpolyfreak.bsky.social
   Description: Adventure game where you control two little light bulbs, using the
     whole light spectrum to find secrets!

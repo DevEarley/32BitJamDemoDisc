@@ -14,10 +14,13 @@ public class DemoDiscController : MonoBehaviour
     public Sprite Linux;
     public Sprite WebGL;
     public Sprite ROM;
+    public Sprite InstaPlay;
+    public Sprite DownloadPlay;
     public LayerMask GameListLayerMask;
     private void Start()
     {
         ServiceLocator = gameObject.GetComponent<ServiceLocator>();
+        
     }
 
     public void ToggleFullscreen()

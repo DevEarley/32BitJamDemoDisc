@@ -14,15 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AuthorOrTeamName: 'Senhor Imperador '
   ItchIOLink: https://senhor-imperador.itch.io/heartless-ve
+  DirectLink: 
   SocialMediaLink: ' https://youtube.com/@imperial_hall_games'
-  DirectDownloadLink: 
   Description: Submission to the 32Bit Summer Games Jam 2024
   Name: Heartless
   ThumbnailImage: {fileID: 21300000, guid: 14a6d4acd8af23a499d46733a3dd9a8b, type: 3}
-  OnWindows: 0
+  OnWindows: 1
   OnMacOS: 0
   OnLinux: 0
-  OnWebGL: 1
+  OnWebGL: 0
+  Rom: 0
   GameJam_1: 23
   GameJam_2: 0
   GameJam_3: 0

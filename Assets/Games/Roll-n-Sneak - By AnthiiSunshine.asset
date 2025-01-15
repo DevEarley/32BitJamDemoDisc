@@ -14,15 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AuthorOrTeamName: AnthiiSunshine
   ItchIOLink: https://anthiisunshine.itch.io/roll-n-sneak
+  DirectLink: 
   SocialMediaLink: https://x.com/AnthiiGames
-  DirectDownloadLink: 
   Description: Submission to the 32Bit Spring Cleaning 2023
   Name: Roll N Sneak
   ThumbnailImage: {fileID: 21300000, guid: ca62f075816508e4b9d6c799805a1b6c, type: 3}
-  OnWindows: 0
+  OnWindows: 1
   OnMacOS: 0
   OnLinux: 0
-  OnWebGL: 1
+  OnWebGL: 0
+  Rom: 0
   GameJam_1: 18
   GameJam_2: 0
   GameJam_3: 0

@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AuthorOrTeamName: byDanDans
   ItchIOLink: https://bydandans.itch.io/healing
+  DirectLink: https://itch.io/embed-upload/11544883
   SocialMediaLink: https://x.com/byDanDans
-  DirectDownloadLink: 
   Description: Made by Dan for the 32BitJam B4 Halloween
   Name: Healing
   ThumbnailImage: {fileID: 21300000, guid: 43132d8ba5120d14aa9bb2118cce9276, type: 3}
@@ -23,6 +23,7 @@ MonoBehaviour:
   OnMacOS: 0
   OnLinux: 0
   OnWebGL: 1
+  Rom: 0
   GameJam_1: 23
   GameJam_2: 0
   GameJam_3: 0

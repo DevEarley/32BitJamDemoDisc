@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AuthorOrTeamName: byDanDans
   ItchIOLink: https://bydandans.itch.io/summerbeach
+  DirectLink: 
   SocialMediaLink: https://x.com/byDanDans
   Description: Made by Dan for the 32Bit Summer Games
   Name: Summer Beach
@@ -21,7 +22,8 @@ MonoBehaviour:
   OnWindows: 1
   OnMacOS: 0
   OnLinux: 0
-  OnWebGL: 1
+  OnWebGL: 0
+  Rom: 0
   GameJam_1: 22
   GameJam_2: 0
   GameJam_3: 0

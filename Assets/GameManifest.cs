@@ -6,6 +6,7 @@ public class GameManifest : ScriptableObject
 {
    public string AuthorOrTeamName;
     public string ItchIOLink;
+    public string DirectLink;
     public string SocialMediaLink;
     public string Description;
     public string Name;

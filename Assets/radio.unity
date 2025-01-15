@@ -187,7 +187,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1910595729}
     m_Modifications:
     - target: {fileID: 1866585396457918576, guid: a769da422b803974d8053e9bca6dc24a, type: 3}
       propertyPath: m_Cameras.Array.size
@@ -268,7 +268,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1910595729}
     m_Modifications:
     - target: {fileID: 2313818030812550477, guid: 64c3b151f1d772242b37d682ba209f77, type: 3}
       propertyPath: orthographic size
@@ -296,15 +296,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5255159867396164941, guid: 64c3b151f1d772242b37d682ba209f77, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5255159867396164941, guid: 64c3b151f1d772242b37d682ba209f77, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5255159867396164941, guid: 64c3b151f1d772242b37d682ba209f77, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5255159867396164941, guid: 64c3b151f1d772242b37d682ba209f77, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -665,9 +665,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 82d49bab5f361124a92561109cdbe166, type: 3}
-  m_Resource: {fileID: 8300000, guid: 82d49bab5f361124a92561109cdbe166, type: 3}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -1141,6 +1141,135 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1023134682}
   m_CullTransparentMesh: 1
+--- !u!1 &1152447998
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1152448000}
+  - component: {fileID: 1152447999}
+  m_Layer: 0
+  m_Name: Audio Source (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &1152447999
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1152447998}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: faf9171c17b056b4c8f365a4ad8b16c7, type: 3}
+  m_Resource: {fileID: 8300000, guid: faf9171c17b056b4c8f365a4ad8b16c7, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &1152448000
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1152447998}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1155587991
 GameObject:
   m_ObjectHideFlags: 0
@@ -1246,6 +1375,18 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 1152447999}
+          m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+          m_MethodName: Play
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1298341775
 GameObject:
   m_ObjectHideFlags: 0
@@ -1281,22 +1422,10 @@ MonoBehaviour:
     SongName: Uncroaked
     Artist: Mishikis
     ColorTint: {r: 0.21396804, g: 1, b: 0, a: 1}
-  - clip: {fileID: 8300000, guid: 7946d5a9c1c20de4399caade186c17f8, type: 3}
-    SongName: Dawn Into a New Future
-    Artist: Niko Kozlowitz
-    ColorTint: {r: 0.40101814, g: 0, b: 1, a: 1}
-  - clip: {fileID: 8300000, guid: f2ce903fc0478ff4d96dec07e75de91e, type: 3}
-    SongName: Title Screen Demo Disc
-    Artist: Mr Union
-    ColorTint: {r: 0, g: 0.9758296, b: 1, a: 1}
-  - clip: {fileID: 8300000, guid: facffc52ea314ac4f818a75cc73e5c62, type: 3}
-    SongName: Requiem (OG mix)
-    Artist: 'Xai '
-    ColorTint: {r: 0.2939389, g: 0, b: 0.9716981, a: 1}
-  - clip: {fileID: 8300000, guid: 588feead9a02f51488e69c738ea0e875, type: 3}
-    SongName: Requiem Remix
-    Artist: Xai (Remix by DevEarley)
-    ColorTint: {r: 0.52210045, g: 0, b: 1, a: 1}
+  - clip: {fileID: 8300000, guid: d7900728bb0154941b7c612121a3ef49, type: 3}
+    SongName: Jump Rope Hope
+    Artist: Jaden Eubanks
+    ColorTint: {r: 0.053583622, g: 0, b: 1, a: 1}
   - clip: {fileID: 8300000, guid: b31ff4936d66727459e313be6374146e, type: 3}
     SongName: Neon Skylines
     Artist: 'ImpyCat '
@@ -1317,6 +1446,10 @@ MonoBehaviour:
     SongName: Lost Tech Demo Disc
     Artist: Jaden Eubanks
     ColorTint: {r: 0.39030075, g: 0, b: 1, a: 1}
+  - clip: {fileID: 8300000, guid: d603454078c5c0c4c857ce538eb6e02c, type: 3}
+    SongName: Sweet Sugar Overdrive
+    Artist: Headphone Headache
+    ColorTint: {r: 0.9668827, g: 0.383, b: 1, a: 1}
   - clip: {fileID: 8300000, guid: 569bf0109aa1cc7478d4fa84167fbb75, type: 3}
     SongName: Boss_Theme (from Uncroaked)
     Artist: Mishikis
@@ -1325,6 +1458,14 @@ MonoBehaviour:
     SongName: Streetscape
     Artist: DannyGoldstar
     ColorTint: {r: 1, g: 0.70070094, b: 0, a: 1}
+  - clip: {fileID: 8300000, guid: facffc52ea314ac4f818a75cc73e5c62, type: 3}
+    SongName: Requiem (OG mix)
+    Artist: 'Xai '
+    ColorTint: {r: 0.2939389, g: 0, b: 0.9716981, a: 1}
+  - clip: {fileID: 8300000, guid: 588feead9a02f51488e69c738ea0e875, type: 3}
+    SongName: Requiem Remix
+    Artist: Xai (Remix by DevEarley)
+    ColorTint: {r: 0.52210045, g: 0, b: 1, a: 1}
   - clip: {fileID: 8300000, guid: 82d49bab5f361124a92561109cdbe166, type: 3}
     SongName: 32Bit Demo Disc Startup
     Artist: AstroDesert (Remix by DevEarley)
@@ -1333,10 +1474,14 @@ MonoBehaviour:
     SongName: Startup CD 7 (original mix)
     Artist: AstroDesert
     ColorTint: {r: 0.6901961, g: 1, b: 0.227451, a: 1}
-  - clip: {fileID: 8300000, guid: d7900728bb0154941b7c612121a3ef49, type: 3}
-    SongName: Jump Rope Hope
-    Artist: Jaden Eubanks
-    ColorTint: {r: 0.053583622, g: 0, b: 1, a: 1}
+  - clip: {fileID: 8300000, guid: f2ce903fc0478ff4d96dec07e75de91e, type: 3}
+    SongName: Title Screen Demo Disc
+    Artist: Mr Union
+    ColorTint: {r: 0, g: 0.9758296, b: 1, a: 1}
+  - clip: {fileID: 8300000, guid: 7946d5a9c1c20de4399caade186c17f8, type: 3}
+    SongName: Dawn Into a New Future
+    Artist: Niko Kozlowitz
+    ColorTint: {r: 0.40101814, g: 0, b: 1, a: 1}
   CurrentTrackIndex: 0
   SongName_GUI: {fileID: 1023134684}
   Artist_GUI: {fileID: 1986996746}
@@ -1483,6 +1628,23 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 1152447999}
+          m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+          m_MethodName: Play
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!4 &1509084751 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5255159867396164941, guid: 64c3b151f1d772242b37d682ba209f77, type: 3}
+  m_PrefabInstance: {fileID: 317015349}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1525893711 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 59d32b6cd15d0674c866d805b35c2353, type: 3}
@@ -1746,7 +1908,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -400, y: -11}
-  m_SizeDelta: {x: 800, y: 253.5}
+  m_SizeDelta: {x: 800, y: 173.3}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1758534782
 MonoBehaviour:
@@ -1970,6 +2132,75 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 1152447999}
+          m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+          m_MethodName: Play
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!1 &1910595728
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1910595729}
+  - component: {fileID: 1910595730}
+  m_Layer: 0
+  m_Name: Animator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1910595729
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1910595728}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1509084751}
+  - {fileID: 2046687437}
+  - {fileID: 3555102685846922833}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1910595730
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1910595728}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: adc85554239ff7347a6b1e7816f30231, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1986996744
 GameObject:
   m_ObjectHideFlags: 0
@@ -2211,6 +2442,11 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!4 &2046687437 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7039077213853186107, guid: a769da422b803974d8053e9bca6dc24a, type: 3}
+  m_PrefabInstance: {fileID: 71300910}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2058314177
 GameObject:
   m_ObjectHideFlags: 0
@@ -2676,7 +2912,7 @@ RectTransform:
   - {fileID: 1893155119}
   - {fileID: 1155587992}
   - {fileID: 1543429391}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1910595729}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2871,11 +3107,10 @@ GameObject:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 317015349}
+  - {fileID: 1910595729}
   - {fileID: 822928814}
-  - {fileID: 71300910}
   - {fileID: 958662541}
-  - {fileID: 3555102685846922833}
   - {fileID: 553832707}
   - {fileID: 1298341777}
   - {fileID: 1849338319}
+  - {fileID: 1152448000}

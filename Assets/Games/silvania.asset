@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bddcb23656b95c45bc3d173042d3911, type: 3}
   m_Name: silvania
   m_EditorClassIdentifier: 
-  AuthorOrTeamName: ' WaveParadigm ('
+  AuthorOrTeamName: ' WaveParadigm'
   ItchIOLink: https://waveparadigm.itch.io/slivania
+  DirectLink: https://itch.io/embed-upload/12457300
   SocialMediaLink: https://twitter.com/Slime_64
   Description: A jam-sized 3D platforming metroidvania!
   Name: Silvania
@@ -21,7 +22,7 @@ MonoBehaviour:
   OnWindows: 1
   OnMacOS: 0
   OnLinux: 0
-  OnWebGL: 0
+  OnWebGL: 1
   Rom: 0
   GameJam_1: 25
   GameJam_2: 0

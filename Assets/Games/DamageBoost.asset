@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AuthorOrTeamName: ' EelShep, MunchiMango, ClaveRedwyn, Jaden Eubanks '
   ItchIOLink: https://eelshep.itch.io/damage-boost
+  DirectLink: https://itch.io/embed-upload/12434114
   SocialMediaLink: https://x.com/vongarfunkle
   Description: Take damage and boost your way through this Spooky PSX style 3D platformer.
   Name: Damage Boost

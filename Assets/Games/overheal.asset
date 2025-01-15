@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AuthorOrTeamName: 'robottinis '
   ItchIOLink: https://robottinis.itch.io/overhealregenerated
+  DirectLink: https://itch.io/embed-upload/12388039
   SocialMediaLink: https://robottinis.itch.io/
   Description: Do not harm, again
   Name: OVERHEAL Regenerated

@@ -1,5 +1,6 @@
 
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using Unity.VisualScripting.Antlr3.Runtime;
@@ -42,7 +43,11 @@ public class RadioController : MonoBehaviour
     public Image Image_Volume_4;
     private Vector4 transparent = new Vector4(1, 1, 1, 0.3f);
 
-
+    private bool StartingToPlay = false;
+    private bool Pausing = false;
+    private bool Paused = true;
+    public bool waiting_to_play = false;
+    private float Pause_time = 0.0f;
     private void Start()
     {
         AudioSource.clip = Playlist[CurrentTrackIndex].clip;
@@ -51,70 +56,126 @@ public class RadioController : MonoBehaviour
         bars.SetColor("_Color", Playlist[CurrentTrackIndex].ColorTint);
         ui.SetColor("_Color", Playlist[CurrentTrackIndex].ColorTint);
         grid.material.SetColor("_GridLineColor", Playlist[CurrentTrackIndex].ColorTint);
+        StartCoroutine(Delayed_start());
+    }
+
+    private IEnumerator Delayed_start()
+    {
+        yield return new WaitForSecondsRealtime(3.0f);
+        Paused = false;
         AudioSource.Play();
     }
+
     public void ToggleFullscreen()
     {
         Screen.fullScreen = !Screen.fullScreen;
 
     }
-    public void Next()
-    {
-        if (waiting_to_play == true) return;
-        waiting_to_play = true;
-        AudioSource.pitch = 1.0f;
-        StartingToPlay = false;
-        Paused = false;
-        Pausing = false;
-        CurrentTrackIndex++;
-        if (CurrentTrackIndex >= Playlist.Count)
-        {
-            CurrentTrackIndex = 0;
-        }
-        var song = Playlist[CurrentTrackIndex];
-        AudioSource.clip = song.clip;
-        SongName_GUI.text = song.SongName;
-        Artist_GUI.text = song.Artist;
-        AudioSource.Play();
-        bars.SetColor("_Color", song.ColorTint);
-        ui.SetColor("_Color", song.ColorTint);
-        grid.material.SetColor("_GridLineColor", song.ColorTint);
 
-    }
     private void OnApplicationFocus(bool focus)
     {
-        if (focus == false)
-        {
-            Paused = true;
-        }
-        else
-        {
-            AudioSource.UnPause();
-        }
+        //if (focus == false)
+        //{
+        //    Paused = true;
+        //}
+        //else
+        //{
+        //    Paused = false;
+        //    AudioSource.UnPause();
+        //}
     }
-    public void Previous()
+    public IEnumerator Delayed_previous()
     {
-        if (waiting_to_play == true) return;
-        waiting_to_play = true;
-        AudioSource.pitch = 1.0f;
-        StartingToPlay = false;
-        Paused = false;
-        Pausing = false;
+        Paused = true;
+        AudioSource.Stop();
         CurrentTrackIndex--;
         if (CurrentTrackIndex < 0)
         {
             CurrentTrackIndex = Playlist.Count - 1;
         }
+        SongName_GUI.text = "...Loading Track " + (CurrentTrackIndex + 1) +"/" + Playlist.Count;
+        Artist_GUI.text = "";
+        var song_1 = Playlist[CurrentTrackIndex];
+        var length_int_seconds = song_1.clip.length;
+        var length_seconds = length_int_seconds % 60;
+        var length_minutes = (length_int_seconds - length_seconds) / 60;
+        Time_GUI.text = $"00:00 | {length_minutes.ToString("00")}:{length_seconds.ToString("00")}";
+        yield return new WaitForSecondsRealtime(1.9f);
         var song = Playlist[CurrentTrackIndex];
         AudioSource.clip = song.clip;
         SongName_GUI.text = song.SongName;
         Artist_GUI.text = song.Artist;
+        waiting_to_play = true;
+        AudioSource.pitch = 1.0f;
+        StartingToPlay = false;
+        Paused = false;
+        Pausing = false;
         AudioSource.Play();
         bars.SetColor("_Color", song.ColorTint);
         ui.SetColor("_Color", song.ColorTint);
         grid.material.SetColor("_GridLineColor", song.ColorTint);
     }
+    public IEnumerator Delayed_next()
+    {
+        Paused = true;
+        AudioSource.Stop();
+        CurrentTrackIndex++;
+        if (CurrentTrackIndex >= Playlist.Count)
+        {
+            CurrentTrackIndex = 0;
+        }
+        SongName_GUI.text = "...Loading Track " + (CurrentTrackIndex + 1) + "/" + Playlist.Count;
+        var song_1 = Playlist[CurrentTrackIndex];
+        var length_int_seconds = song_1.clip.length;
+        var length_seconds = length_int_seconds % 60;
+        var length_minutes = (length_int_seconds - length_seconds) / 60;
+        Time_GUI.text = $"00:00 | {length_minutes.ToString("00")}:{length_seconds.ToString("00")}";
 
+        Artist_GUI.text = "";
+        yield return new WaitForSecondsRealtime(1.9f);
+        var song = Playlist[CurrentTrackIndex];
+        AudioSource.clip = song.clip;
+        loading = false;
+        SongName_GUI.text = song.SongName;
+        Artist_GUI.text = song.Artist;
+        waiting_to_play = true;
+        AudioSource.pitch = 1.0f;
+        StartingToPlay = false;
+        Paused = false;
+        Pausing = false;
+        AudioSource.Play();
+        bars.SetColor("_Color", song.ColorTint);
+        ui.SetColor("_Color", song.ColorTint);
+        grid.material.SetColor("_GridLineColor", song.ColorTint);
+    }
+    private bool loading = false;
+    private Coroutine loading_routine;
+    public void Previous()
+    {
+        if (loading == true)
+        {
+            StopCoroutine(loading_routine);
+        }
+
+        if (waiting_to_play == true) return;
+        loading = true;
+        loading_routine = StartCoroutine(Delayed_previous());
+
+
+    }
+    public void Next()
+    {
+        if (loading == true)
+        {
+
+            StopCoroutine(loading_routine);
+        }
+
+        if (waiting_to_play == true) return;
+        loading = true;
+        loading_routine = StartCoroutine(Delayed_next());
+
+    }
     public void Play()
     {
         if (Paused == false) return;
@@ -131,10 +192,7 @@ public class RadioController : MonoBehaviour
         AudioSource.UnPause();
 
     }
-    private bool StartingToPlay = false;
-    private bool Pausing = false;
-    private bool Paused = true;
-    private float Pause_time = 0.0f;
+
     public void Pause()
     {
         StartingToPlay = false;
@@ -145,7 +203,6 @@ public class RadioController : MonoBehaviour
         Pause_button.color = transparent;
         Pause_time = 1.0f;
     }
-    public bool waiting_to_play = false;
     public void Update()
     {
         if (AudioSource.isPlaying)

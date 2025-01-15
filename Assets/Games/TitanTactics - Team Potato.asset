@@ -14,14 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AuthorOrTeamName: Team Potato
   ItchIOLink: https://team-potato.itch.io/titan-tactics
+  DirectLink: 
   SocialMediaLink: https://team-potato.itch.io/
   Description: A simple tactics game with PS1 aesthetics!
   Name: Titan Tactics
   ThumbnailImage: {fileID: 21300000, guid: 10c3328e2a274ca4b9bf95749991b9ef, type: 3}
-  OnWindows: 0
-  OnMacOS: 0
-  OnLinux: 0
-  OnWebGL: 1
+  OnWindows: 1
+  OnMacOS: 1
+  OnLinux: 1
+  OnWebGL: 0
+  Rom: 0
   GameJam_1: 10
   GameJam_2: 0
   GameJam_3: 0

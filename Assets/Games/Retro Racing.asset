@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AuthorOrTeamName: Richo
   ItchIOLink: https://richo.itch.io/retro-racing-dd
+  DirectLink: https://itch.io/embed-upload/11465763
   SocialMediaLink: https://richo.itch.io/
   Description: A fast arcade F1 racing game
   Name: Retro Racing
@@ -22,6 +23,7 @@ MonoBehaviour:
   OnMacOS: 0
   OnLinux: 0
   OnWebGL: 1
+  Rom: 0
   GameJam_1: 22
   GameJam_2: 0
   GameJam_3: 0
