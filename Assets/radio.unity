@@ -163,6 +163,7 @@ MonoBehaviour:
       BoxPrefab: {fileID: 101714, guid: 510379495d27fa548887fb67e4a88585, type: 3}
   Camera_Rig_animator: {fileID: 958662540}
   Logo: {fileID: 751808856}
+  Grid: {fileID: 1385262261}
   BigMode: 0
 --- !u!4 &10069006
 Transform:
@@ -372,7 +373,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 2100000, guid: 262da183ac6f73c47b837571e4e94f94, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -477,7 +478,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 2100000, guid: 262da183ac6f73c47b837571e4e94f94, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -582,7 +583,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 2100000, guid: 262da183ac6f73c47b837571e4e94f94, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -816,7 +817,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 2100000, guid: 262da183ac6f73c47b837571e4e94f94, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -1190,7 +1191,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 2100000, guid: 262da183ac6f73c47b837571e4e94f94, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 4, y: 4, z: 4, w: 4}
@@ -1276,58 +1277,73 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AudioSource: {fileID: 553832706}
   Playlist:
-  - clip: {fileID: 8300000, guid: 82d49bab5f361124a92561109cdbe166, type: 3}
-    SongName: 32Bit Demo Disc Startup
-    Artist: AstroDesert (Remix by DevEarley)
-  - clip: {fileID: 8300000, guid: c261b887e04c87145bd61cc57e4e9e4c, type: 3}
-    SongName: Startup CD 7 (original mix)
-    Artist: AstroDesert
-  - clip: {fileID: 8300000, guid: 7946d5a9c1c20de4399caade186c17f8, type: 3}
-    SongName: Dawn Into a New Future
-    Artist: Niko Kozlowitz
-  - clip: {fileID: 8300000, guid: f2ce903fc0478ff4d96dec07e75de91e, type: 3}
-    SongName: Title Screen Demo Disc
-    Artist: Mr Union
-  - clip: {fileID: 8300000, guid: 90092f28b39f909419a0a0fe274cf31c, type: 3}
-    SongName: Title Screen Loop
-    Artist: Mr Union (Remix by DevEarley)
-  - clip: {fileID: 8300000, guid: facffc52ea314ac4f818a75cc73e5c62, type: 3}
-    SongName: Requiem (OG mix)
-    Artist: 'Xai '
-  - clip: {fileID: 8300000, guid: 588feead9a02f51488e69c738ea0e875, type: 3}
-    SongName: Requiem Remix
-    Artist: Xai (Remix by DevEarley)
-  - clip: {fileID: 8300000, guid: b31ff4936d66727459e313be6374146e, type: 3}
-    SongName: Neon Skylines
-    Artist: 'ImpyCat '
-  - clip: {fileID: 8300000, guid: d9aae75e4db8cf341acbf4f2a9ecb357, type: 3}
-    SongName: Comet Rush
-    Artist: 'ImpyCat '
-  - clip: {fileID: 8300000, guid: 6ede8c46ce8848546aa8aab211aa57c6, type: 3}
-    SongName: Solar Signals
-    Artist: 'ImpyCat '
-  - clip: {fileID: 8300000, guid: 32fc1a12496898c4eb54cb49798e0269, type: 3}
-    SongName: Streetscape
-    Artist: DannyGoldstar
-  - clip: {fileID: 8300000, guid: 144613d83ea3f0b4e9b7eadd0209e17f, type: 3}
-    SongName: Liquid Crystal
-    Artist: Anubhab Sett
   - clip: {fileID: 8300000, guid: 022ad2b014eab4f4aa61fe7148d2a4ca, type: 3}
     SongName: Uncroaked
     Artist: Mishikis
-  - clip: {fileID: 8300000, guid: 569bf0109aa1cc7478d4fa84167fbb75, type: 3}
-    SongName: Boss_Theme (from Uncroaked)
-    Artist: Mishikis
-  - clip: {fileID: 8300000, guid: d7900728bb0154941b7c612121a3ef49, type: 3}
-    SongName: Jump Rope Hope
-    Artist: Jaden Eubanks
+    ColorTint: {r: 0.21396804, g: 1, b: 0, a: 1}
+  - clip: {fileID: 8300000, guid: 7946d5a9c1c20de4399caade186c17f8, type: 3}
+    SongName: Dawn Into a New Future
+    Artist: Niko Kozlowitz
+    ColorTint: {r: 0.40101814, g: 0, b: 1, a: 1}
+  - clip: {fileID: 8300000, guid: f2ce903fc0478ff4d96dec07e75de91e, type: 3}
+    SongName: Title Screen Demo Disc
+    Artist: Mr Union
+    ColorTint: {r: 0, g: 0.9758296, b: 1, a: 1}
+  - clip: {fileID: 8300000, guid: facffc52ea314ac4f818a75cc73e5c62, type: 3}
+    SongName: Requiem (OG mix)
+    Artist: 'Xai '
+    ColorTint: {r: 0.2939389, g: 0, b: 0.9716981, a: 1}
+  - clip: {fileID: 8300000, guid: 588feead9a02f51488e69c738ea0e875, type: 3}
+    SongName: Requiem Remix
+    Artist: Xai (Remix by DevEarley)
+    ColorTint: {r: 0.52210045, g: 0, b: 1, a: 1}
+  - clip: {fileID: 8300000, guid: b31ff4936d66727459e313be6374146e, type: 3}
+    SongName: Neon Skylines
+    Artist: 'ImpyCat '
+    ColorTint: {r: 1, g: 0, b: 0.93721867, a: 1}
+  - clip: {fileID: 8300000, guid: d9aae75e4db8cf341acbf4f2a9ecb357, type: 3}
+    SongName: Comet Rush
+    Artist: 'ImpyCat '
+    ColorTint: {r: 1, g: 0.34635195, b: 0, a: 1}
+  - clip: {fileID: 8300000, guid: 6ede8c46ce8848546aa8aab211aa57c6, type: 3}
+    SongName: Solar Signals
+    Artist: 'ImpyCat '
+    ColorTint: {r: 1, g: 0.55117804, b: 0, a: 1}
+  - clip: {fileID: 8300000, guid: 144613d83ea3f0b4e9b7eadd0209e17f, type: 3}
+    SongName: Liquid Crystal
+    Artist: Anubhab Sett
+    ColorTint: {r: 0, g: 1, b: 0.6998246, a: 1}
   - clip: {fileID: 8300000, guid: adabfa696207b9f439f01fe2f7fd3fc4, type: 3}
     SongName: Lost Tech Demo Disc
     Artist: Jaden Eubanks
+    ColorTint: {r: 0.39030075, g: 0, b: 1, a: 1}
+  - clip: {fileID: 8300000, guid: 569bf0109aa1cc7478d4fa84167fbb75, type: 3}
+    SongName: Boss_Theme (from Uncroaked)
+    Artist: Mishikis
+    ColorTint: {r: 1, g: 0.26194972, b: 0, a: 1}
+  - clip: {fileID: 8300000, guid: d320b5b8316bd014fb2453e0ed24d31b, type: 3}
+    SongName: Streetscape
+    Artist: DannyGoldstar
+    ColorTint: {r: 1, g: 0.70070094, b: 0, a: 1}
+  - clip: {fileID: 8300000, guid: 82d49bab5f361124a92561109cdbe166, type: 3}
+    SongName: 32Bit Demo Disc Startup
+    Artist: AstroDesert (Remix by DevEarley)
+    ColorTint: {r: 0.6901961, g: 1, b: 0.227451, a: 1}
+  - clip: {fileID: 8300000, guid: c261b887e04c87145bd61cc57e4e9e4c, type: 3}
+    SongName: Startup CD 7 (original mix)
+    Artist: AstroDesert
+    ColorTint: {r: 0.6901961, g: 1, b: 0.227451, a: 1}
+  - clip: {fileID: 8300000, guid: d7900728bb0154941b7c612121a3ef49, type: 3}
+    SongName: Jump Rope Hope
+    Artist: Jaden Eubanks
+    ColorTint: {r: 0.053583622, g: 0, b: 1, a: 1}
   CurrentTrackIndex: 0
   SongName_GUI: {fileID: 1023134684}
   Artist_GUI: {fileID: 1986996746}
   Time_GUI: {fileID: 2058314179}
+  bars: {fileID: 2100000, guid: 4907eabccab216241866ab9708ac6d32, type: 2}
+  grid: {fileID: 1385262261}
+  ui: {fileID: 2100000, guid: 262da183ac6f73c47b837571e4e94f94, type: 2}
   Volume_Level: 4
   Volume_Level_0: 0
   Volume_Level_1: 0.2
@@ -1357,6 +1373,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &1385262261 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 6638381694812918966, guid: 2ff9629a1dd6fc44c87015e0dbb5665d, type: 3}
+  m_PrefabInstance: {fileID: 822928814}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1424201523
 GameObject:
   m_ObjectHideFlags: 0
@@ -1407,7 +1428,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 2100000, guid: 262da183ac6f73c47b837571e4e94f94, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -1517,7 +1538,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 2100000, guid: 262da183ac6f73c47b837571e4e94f94, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -1580,6 +1601,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3555102685846922833}
     m_Modifications:
+    - target: {fileID: 2791212764063788054, guid: af69ca7d3d529fb428498798d7b0fa4f, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 2100000, guid: 262da183ac6f73c47b837571e4e94f94, type: 2}
     - target: {fileID: 4544752406229332890, guid: af69ca7d3d529fb428498798d7b0fa4f, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1735,7 +1760,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 2100000, guid: 262da183ac6f73c47b837571e4e94f94, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -1890,7 +1915,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 2100000, guid: 262da183ac6f73c47b837571e4e94f94, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 4, y: 4, z: 4, w: 4}
@@ -2131,7 +2156,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 2100000, guid: 262da183ac6f73c47b837571e4e94f94, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}

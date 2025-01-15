@@ -40,14 +40,15 @@ public class GameListController : MonoBehaviour
         SortedGames = Games.ToArray();
         ServiceLocator = FindAnyObjectByType<ServiceLocator>();
         Animator = gameObject.GetComponent<Animator>();
-        SetGamesToTarget_AfterAnimation();
-        ServiceLocator.MenuAnimator.Play("choose-game");
+        StartCoroutine(SetGamesToTarget_AfterAnimation());
+        //ServiceLocator.MenuAnimator.Play("choose-game");
 
 
     }
 
 
-    private void SetGamesToTarget_AfterAnimation() { 
+    private IEnumerator SetGamesToTarget_AfterAnimation() { 
+        yield return new WaitForSecondsRealtime(0.1f);
         Debug.Log("SetGamesToTarget");
         for (var i = 0; i < Games.Count; i++)
         {
@@ -78,6 +79,7 @@ public class GameListController : MonoBehaviour
         is_highlighting_game = true;
         ServiceLocator.MenuAnimator.Play("choose-game-highlight-game");
         CurrentGame = GameManifest;
+
         ServiceLocator.SFXController.Play_SelectGame_SFX();
         GameDescription.text = CurrentGame.Description;
         GameTitle.text = CurrentGame.Name;

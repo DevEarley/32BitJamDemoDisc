@@ -43,7 +43,7 @@ public class MusicController : MonoBehaviour
     }
     public void Resume()
     {
-        MusicAudioSource.Play();
+        MusicAudioSource.UnPause();
     }
     public void Play_GameSelection_Music() 
     {

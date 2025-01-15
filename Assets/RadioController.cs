@@ -13,7 +13,7 @@ public class PlaylistItem
     public AudioClip clip;
     public string SongName;
     public string Artist;
-
+    public Color ColorTint;
 }
 public class RadioController : MonoBehaviour
 {
@@ -24,6 +24,9 @@ public class RadioController : MonoBehaviour
     public TextMeshProUGUI SongName_GUI;
     public TextMeshProUGUI Artist_GUI;
     public TextMeshProUGUI Time_GUI;
+    public Material bars;
+    public MeshRenderer grid;
+    public Material ui;
     public int Volume_Level = 4;
     public float Volume_Level_0 = 0.0f;
     public float Volume_Level_1 = 0.2f;
@@ -45,10 +48,15 @@ public class RadioController : MonoBehaviour
         AudioSource.clip = Playlist[CurrentTrackIndex].clip;
         SongName_GUI.text = Playlist[CurrentTrackIndex].SongName;
         Artist_GUI.text = Playlist[CurrentTrackIndex].Artist;
+        bars.SetColor("_Color", Playlist[CurrentTrackIndex].ColorTint);
+        ui.SetColor("_Color", Playlist[CurrentTrackIndex].ColorTint);
+        grid.material.SetColor("_GridLineColor", Playlist[CurrentTrackIndex].ColorTint);
+        AudioSource.Play();
     }
     public void ToggleFullscreen()
     {
         Screen.fullScreen = !Screen.fullScreen;
+
     }
     public void Next()
     {
@@ -63,10 +71,14 @@ public class RadioController : MonoBehaviour
         {
             CurrentTrackIndex = 0;
         }
-        AudioSource.clip = Playlist[CurrentTrackIndex].clip;
-        SongName_GUI.text = Playlist[CurrentTrackIndex].SongName;
-        Artist_GUI.text = Playlist[CurrentTrackIndex].Artist;
+        var song = Playlist[CurrentTrackIndex];
+        AudioSource.clip = song.clip;
+        SongName_GUI.text = song.SongName;
+        Artist_GUI.text = song.Artist;
         AudioSource.Play();
+        bars.SetColor("_Color", song.ColorTint);
+        ui.SetColor("_Color", song.ColorTint);
+        grid.material.SetColor("_GridLineColor", song.ColorTint);
 
     }
     private void OnApplicationFocus(bool focus)
@@ -77,7 +89,7 @@ public class RadioController : MonoBehaviour
         }
         else
         {
-            Play();
+            AudioSource.UnPause();
         }
     }
     public void Previous()
@@ -93,10 +105,14 @@ public class RadioController : MonoBehaviour
         {
             CurrentTrackIndex = Playlist.Count - 1;
         }
-        AudioSource.clip = Playlist[CurrentTrackIndex].clip;
-        SongName_GUI.text = Playlist[CurrentTrackIndex].SongName;
-        Artist_GUI.text = Playlist[CurrentTrackIndex].Artist;
+        var song = Playlist[CurrentTrackIndex];
+        AudioSource.clip = song.clip;
+        SongName_GUI.text = song.SongName;
+        Artist_GUI.text = song.Artist;
         AudioSource.Play();
+        bars.SetColor("_Color", song.ColorTint);
+        ui.SetColor("_Color", song.ColorTint);
+        grid.material.SetColor("_GridLineColor", song.ColorTint);
     }
 
     public void Play()
@@ -112,7 +128,7 @@ public class RadioController : MonoBehaviour
 
         Play_button.color = transparent;
         Pause_button.color = Color.white;
-        AudioSource.Play();
+        AudioSource.UnPause();
 
     }
     private bool StartingToPlay = false;

@@ -12,6 +12,7 @@ public class SpectrumAnalyzer : MonoBehaviour
     public AnalyzerSettings settings; //All of our settings
     public Animator Camera_Rig_animator;
     public GameObject Logo;
+    public MeshRenderer Grid;
     //private
     private float[] spectrum; //Audio Source data
     private List<GameObject> pillars; //ref pillars to scale/move with music
@@ -46,6 +47,7 @@ public class SpectrumAnalyzer : MonoBehaviour
     }
 
     private float momentum = 0;
+    private float momentum2 = 0;
     void Update()
     {
         if (Input.GetKey(KeyCode.R)) Rebuild();
@@ -72,22 +74,32 @@ public class SpectrumAnalyzer : MonoBehaviour
         }
         var average = sum / pillars.Count;
         momentum += (average * average);
+        momentum2 += (average * 0.01f);
 
+
+        momentum2 = Mathf.Min(10.0f, momentum2);
+        momentum2 = Mathf.Lerp(momentum2, 0.0f, Time.deltaTime  * 8.0f);
+        momentum2 = Mathf.Max(0.05f, momentum2);
+
+        Camera_Rig_animator.speed = momentum2;
+        Grid.material.SetFloat("_Amplitude2", (20.0f* momentum2));
+       //Grid.material.SetFloat("_Frequency1", (2.0f* average));
+        Grid.material.SetFloat("_Emission", 0.2f+(momentum2*3.0f));
 
         momentum = Mathf.Min(0.4f, momentum);
-        Camera_Rig_animator.speed = momentum;
+
         momentum = Mathf.Lerp(momentum, 0.0f, Time.deltaTime  * 4.0f);
-        momentum = Mathf.Max(0.01f, momentum);
+        momentum = Mathf.Max(0.05f, momentum);
         if (average > 0.9)
         {
-            BigMode = Mathf.Lerp(BigMode, 20.0f, Time.deltaTime * (average/4.0f));
+            BigMode = Mathf.Lerp(BigMode, 15.0f, Time.deltaTime * (average/4.0f));
         }
         else
         {
             BigMode = Mathf.Lerp(BigMode, 0, Time.deltaTime * 4.0f);
 
         }
-            Logo.transform.localScale = momentum*Vector3.one*(20.0f + BigMode);
+            Logo.transform.localScale = momentum*Vector3.one*(15.0f + BigMode);
     }
     public float BigMode = 0;
     /// <summary>
